@@ -1,11 +1,11 @@
 .socials-container-trigger {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
   height: 50px;
   border-radius: var(--radius-pill);
-  background-color: var(--color-bg-secondary);
+  @include background-glass;
   border: 1px solid var(--color-border);
   @include flex-center-center-row;
   transition: var(--transition-fast);
@@ -17,7 +17,7 @@
 }
 
 .socials-container {
-  position: absolute;
+  position: fixed;
   bottom: 80px;
   right: 20px;
   @include flex-center-center-column;
@@ -31,7 +31,7 @@
     height: 50px;
     width: 50px;
     border-radius: var(--radius-pill);
-    background-color: var(--color-bg-secondary);
+    @include background-glass;
     @include flex-center-center-row;
     border: 1px solid var(--color-border);
     transition: var(--transition-fast);

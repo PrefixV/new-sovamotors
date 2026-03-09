@@ -11,6 +11,10 @@ body {
   background-color: var(--color-bg);
 }
 
+body, html {
+  scrollbar-width: none;
+}
+
 .logo {
   color: var(--color-text);
   font-size: var(--font-size-md);
@@ -24,5 +28,62 @@ body {
 
   &:hover {
     color: var(--color-text-secondary);
+  }
+}
+
+.button, .button--transparent {
+  width: 100%;
+  max-width: 200px;
+  padding: var(--space-3);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+  border: 1px solid var(--color-border);
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    background-color: var(--color-bg);
+    cursor: pointer;
+  }
+}
+
+.button--transparent {
+  background-color: transparent;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  object-position: center;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    transform: scale(1.1);
+  }
+
+  &::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+                      90deg,
+                      rgba(10,12,16,0.9) 0%,
+                      rgba(10,12,16,0.65) 40%,
+                      rgba(10,12,16,0.2) 70%,
+                      rgba(10,12,16,0.5) 100%
+      );
   }
 }

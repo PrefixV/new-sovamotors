@@ -1,9 +1,9 @@
 /* Error: Undefined mixin.
- *    ,
- * 10 |   @include flex-center-center-row;
- *    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   socials.scss 10:3  root stylesheet */
+ *   ,
+ * 8 |   @include background-glass;
+ *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   socials.scss 8:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 10 \2502    @include flex-center-center-row;\d\a    \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   socials.scss 10:3  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 8 \2502    @include background-glass;\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   socials.scss 8:3  root stylesheet";
 }

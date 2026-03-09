@@ -1,7 +1,10 @@
 .header {
   padding: var(--space-4) var(--space-8);
   @include flex-between-center-row;
-  background-color: var(--color-bg-secondary);
+  @include background-glass;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   &__menu-list {
     @include flex-center-center-row;
