@@ -1,6 +1,7 @@
 .header {
   padding: var(--space-4) var(--space-8);
   @include flex-between-center-row;
+  background-color: var(--color-bg-secondary);
 
   &__menu-list {
     @include flex-center-center-row;

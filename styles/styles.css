@@ -9,9 +9,9 @@
   --color-text: #e6e8ee;
   --color-text-secondary: #a8adbb;
   --color-text-muted: #6c7280;
-  --color-primary: #4f7cff;
-  --color-primary-hover: #6b92ff;
-  --color-primary-active: #3c63d6;
+  --color-primary: #5b8cff;
+  --color-primary-hover: #7aa2ff;
+  --color-primary-active: #3f6de0;
   --color-success: #3fb950;
   --color-warning: #d29922;
   --color-danger: #f85149;
@@ -63,6 +63,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 
@@ -91,12 +92,68 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-bg-secondary);
 }
 .header__menu-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--space-6);
+}
+
+.socials-container-trigger {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-fast);
+}
+.socials-container-trigger:hover {
+  background-color: var(--color-bg);
+  cursor: pointer;
+}
+
+.socials-container {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: var(--transition-fast);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.socials-container__icon {
+  height: 50px;
+  width: 50px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  transition: var(--transition-fast);
+}
+.socials-container__icon:hover {
+  background-color: var(--color-bg);
+  cursor: pointer;
+}
+
+.socials-container--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
 }
 
 /*# sourceMappingURL=styles.css.map */

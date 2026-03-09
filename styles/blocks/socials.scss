@@ -1,0 +1,50 @@
+.socials-container-trigger {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  @include flex-center-center-row;
+  transition: var(--transition-fast);
+
+  &:hover {
+    background-color: var(--color-bg);
+    cursor: pointer;
+  }
+}
+
+.socials-container {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  @include flex-center-center-column;
+  gap: var(--space-4);
+  transition: var(--transition-fast);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-bg-secondary);
+    @include flex-center-center-row;
+    border: 1px solid var(--color-border);
+    transition: var(--transition-fast);
+
+    &:hover {
+      background-color: var(--color-bg);
+      cursor: pointer;
+    }
+  }
+}
+
+.socials-container--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
