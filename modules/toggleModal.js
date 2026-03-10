@@ -7,6 +7,7 @@ export function initModal() {
     if(closeModalButton) {
         closeModalButton.addEventListener("click", () => {
             modal.classList.add("modal-container--hidden");
+            document.body.style.overflow = "auto";
         })
     }
     if(servicesContainer) {
@@ -24,6 +25,7 @@ export function initModal() {
                  modalDescription.textContent = serviceCardDataItem.description;
                  modalTitle.textContent = serviceCardTitle.textContent;
                  modalImage.src = serviceCardDataItem.image;
+                 document.body.style.overflow = "hidden";
             }
         })
     }
