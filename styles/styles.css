@@ -134,6 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 100px;
+  overflow-x: hidden;
 }
 
 body, html {
@@ -338,6 +339,39 @@ body, html {
   min-width: 180px;
 }
 
+@media only screen and (max-width: 768px) {
+  .hero-container__rating {
+    width: 100%;
+    padding-right: 0;
+    gap: var(--space-1);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .hero-container__rating-item {
+    padding: var(--space-4);
+  }
+  .hero-container__rating-item__title, .hero-container__rating-item__title > span {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .hero-container__rating-item:nth-child(2n) {
+    border: none;
+  }
+  .hero-container__title {
+    gap: var(--space-3);
+    flex: 2;
+  }
+  .hero-container__title-slogan {
+    font-size: 45px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+  }
+}
 .socials-container-trigger {
   position: fixed;
   bottom: 20px;
@@ -498,6 +532,30 @@ body, html {
     width: 23%;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .services-container {
+    padding: var(--space-2);
+    gap: var(--space-4);
+  }
+  .services-container__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    padding: var(--space-6);
+  }
+  .services-container__row-card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services-container__row-card {
+    width: 90%;
+  }
+  .services-container__row-card__image img {
+    max-height: 250px;
+    height: 230px;
+  }
+}
 .pricelist-container {
   padding: var(--space-9);
   display: flex;
@@ -570,6 +628,14 @@ body, html {
     width: 80%;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .pricelist-container {
+    padding: var(--space-2);
+  }
+  .pricelist-container__accordion {
+    width: 90%;
+  }
+}
 .maps-container {
   padding: var(--space-8);
   display: flex;
@@ -596,8 +662,24 @@ body, html {
 }
 .yandex-wrapper__maps iframe, .yandex-wrapper__maps div, .yandex-wrapper__ratings iframe, .yandex-wrapper__ratings div {
   border-radius: var(--radius-lg);
+  height: 560px;
 }
 
+@media only screen and (max-width: 768px) {
+  .yandex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .yandex-wrapper__maps, .yandex-wrapper__ratings {
+    max-width: 560px;
+    max-height: 360px;
+  }
+  .yandex-wrapper__maps div, .yandex-wrapper__maps iframe, .yandex-wrapper__ratings div, .yandex-wrapper__ratings iframe {
+    height: 360px;
+  }
+}
 .gallery-container {
   display: flex;
   justify-content: center;
@@ -713,6 +795,45 @@ body, html {
   color: var(--color-text-secondary);
 }
 
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 var(--space-8);
+    gap: var(--space-8);
+  }
+  .footer-container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+  .footer-container__header-logo {
+    font-size: var(--font-size-2xl);
+  }
+  .footer-container__header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+  .footer-container__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-container__contacts-information {
+    color: var(--color-text-secondary);
+    width: 100%;
+    text-align: center;
+  }
+}
 .modal-container {
   width: 100%;
   height: 100svh;
@@ -812,6 +933,15 @@ body, html {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-container__inner-text {
+    overflow-y: visible;
+  }
+  .modal-container__inner__image-wrapper {
+    flex: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

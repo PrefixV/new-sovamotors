@@ -20,6 +20,23 @@
 
     iframe,div {
       border-radius: var(--radius-lg);
+      height: 560px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-sm) {
+  .yandex-wrapper {
+    @include flex-center-center-column;
+
+    &__maps,
+    &__ratings {
+      max-width: 560px;
+      max-height: 360px;
+
+      div, iframe {
+        height: 360px;
+      }
     }
   }
 }

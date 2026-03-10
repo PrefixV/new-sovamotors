@@ -104,3 +104,34 @@
     width: 23%;
   }
 }
+
+@media only screen and (max-width: $tablet-lg) {
+  .services-container {
+    padding: var(--space-2);
+    gap: var(--space-4);
+  }
+
+  .services-container__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    padding: var(--space-6);
+  }
+
+  .services-container__row-card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: $tablet-sm) {
+  .services-container__row-card {
+    width: 90%;
+
+    &__image {
+      img {
+        max-height: 250px;
+        height: 230px;
+      }
+    }
+  }
+}

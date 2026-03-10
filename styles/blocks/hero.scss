@@ -58,3 +58,40 @@
     }
   }
 }
+
+@media only screen and (max-width: $tablet-sm) {
+  .hero-container__rating {
+    width: 100%;
+    padding-right: 0;
+    gap: var(--space-1);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-item {
+      padding: var(--space-4);
+
+      &__title, &__title > span {
+        color: var(--color-text);
+        font-size: var(--font-size-lg);
+        @include flex-center-center-row;
+        gap: var(--space-4);
+      }
+    }
+
+    &-item:nth-child(2n) {
+      border:none;
+    }
+  }
+
+  .hero-container__title {
+    gap: var(--space-3);
+    flex: 2;
+
+    &-slogan {
+      font-size: 45px;
+      font-weight: var(--font-weight-medium);
+      color: var(--color-text);
+    }
+  }
+}

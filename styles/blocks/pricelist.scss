@@ -66,3 +66,14 @@
     width: 80%;
   }
 }
+
+@media only screen and (max-width: $tablet-lg) {
+
+  .pricelist-container {
+    padding: var(--space-2);
+  }
+
+  .pricelist-container__accordion {
+    width: 90%;
+  }
+}

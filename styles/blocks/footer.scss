@@ -46,3 +46,36 @@
     }
   }
 }
+
+@media only screen and (max-width: $tablet-sm) {
+  .footer-container {
+    @include flex-between-center-column;
+    padding:0 var(--space-8);
+    gap: var(--space-8);
+
+    &__header {
+      @include flex-between-center-column;
+      gap: var(--space-5);
+
+      &-logo {
+        font-size: var(--font-size-2xl);
+      }
+
+      &__menu-list {
+        @include flex-between-center-column;
+        gap: var(--space-5);
+      }
+    }
+
+    &__contacts {
+      @include flex-center-center-column;
+      width: 100%;
+
+      &-information {
+        color: var(--color-text-secondary);
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
