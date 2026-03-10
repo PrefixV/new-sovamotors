@@ -95,14 +95,14 @@
 }
 
 .reveal-left {
-  transform: translateX(-80px);
+  transform: translateX(-100px);
   animation: slide-left linear forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
 
 .reveal-right {
-  transform: translateX(80px);
+  transform: translateX(100px);
   animation: slide-right linear forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
@@ -367,9 +367,11 @@ body, html {
   gap: var(--space-9);
   width: 100%;
   max-width: 1780px;
+  max-height: 700px;
   opacity: 1;
   visibility: visible;
   transition: var(--transition-normal);
+  overflow: hidden;
 }
 
 .services-container__row-card {
@@ -436,7 +438,6 @@ body, html {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
-  overflow: hidden;
 }
 
 .pricelist-container {

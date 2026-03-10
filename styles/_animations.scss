@@ -34,7 +34,7 @@
 }
 
 .reveal-left{
-  transform:translateX(-80px);
+  transform:translateX(-100px);
 
   animation:slide-left linear forwards;
   animation-timeline:view();
@@ -42,7 +42,7 @@
 }
 
 .reveal-right{
-  transform:translateX(80px);
+  transform:translateX(100px);
 
   animation:slide-right linear forwards;
   animation-timeline:view();
