@@ -3,6 +3,7 @@ import { toggleServices} from "./modules/toggleServices.js";
 import { initAccordion } from "./modules/accordion.js";
 import { nextSlide, prevSlide } from "./modules/gallery.js";
 import { initModal } from "./modules/toggleModal.js";
+import { toggleHeader } from "./modules/toggleHeader.js";
 
 document.querySelector(".socials-container-trigger")
     .addEventListener("click", toggleSocials);
@@ -19,6 +20,15 @@ document.querySelector(".slider__button--prev")
 const dateNow = new Date();
 
 document.querySelector(".footer-container__contacts-logo").textContent = `Sovamotors13@${dateNow.getFullYear()}`;
+
+document.querySelector(".mobile-nav__button")
+    .addEventListener('click', toggleHeader);
+
+document.querySelectorAll(".header__menu-link").forEach((element) => {
+    element.addEventListener("click", () => {
+        toggleHeader();
+    })
+})
 
 initAccordion();
 initModal();

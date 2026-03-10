@@ -10,5 +10,52 @@
   &__menu-list {
     @include flex-center-center-row;
     gap: var(--space-6);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav__button {
+    width: 50px;
+    height: 50px;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+.header {
+  @include flex-between-center-row;
+
+  &__menu-list {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+  }
+
+  .mobile-nav__button {
+    display: block;
+  }
+}
+
+  .header--active {
+    @include flex-center-center-column;
+    gap: var(--space-6);
+    height: 100svh;
+    transition: none;
+
+    .header__menu-list {
+      @include flex-center-center-column;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+
+      .header__menu-link {
+        font-size: var(--font-size-xl);
+        transition: none;
+      }
+    }
+
+    .mobile-nav__button {
+      display: block;
+    }
   }
 }
