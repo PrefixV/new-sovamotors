@@ -592,4 +592,105 @@ body, html {
   color: var(--color-text-secondary);
 }
 
+.modal-container {
+  width: 100%;
+  height: 100svh;
+  max-height: 100svh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: var(--z-index-modal);
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition-fast);
+}
+.modal-container__button--close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+}
+.modal-container__button--close .button {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-pill);
+}
+
+.modal-container__inner {
+  width: 90%;
+  height: 80svh;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-container__inner__image-wrapper {
+  flex: 1;
+  height: 100%;
+  transition: var(--transition-slow);
+}
+.modal-container__inner__image-wrapper .modal-container__inner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+}
+.modal-container__inner__image-wrapper:hover {
+  flex: 2;
+}
+.modal-container__inner-text {
+  flex: 2;
+  width: 100%;
+  padding: var(--space-9);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.modal-container__inner-text__title {
+  color: var(--color-text);
+}
+.modal-container__inner-text__description {
+  color: var(--color-text-secondary);
+}
+.modal-container__inner-text .modal-container__inner-socials {
+  display: flex;
+  gap: var(--space-5);
+}
+.modal-container__inner-text .modal-container__inner-socials .link--modal {
+  height: 50px;
+  width: 50px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  transition: var(--transition-normal);
+  border: 1px solid var(--color-bg-secondary);
+}
+.modal-container__inner-text .modal-container__inner-socials .link--modal:hover {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.modal-container--hidden {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */

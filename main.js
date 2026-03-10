@@ -2,6 +2,7 @@ import { toggleSocials } from "./modules/toggleSocials.js";
 import { toggleServices} from "./modules/toggleServices.js";
 import { initAccordion } from "./modules/accordion.js";
 import { nextSlide, prevSlide } from "./modules/gallery.js";
+import { initModal } from "./modules/toggleModal.js";
 
 document.querySelector(".socials-container-trigger")
     .addEventListener("click", toggleSocials);
@@ -20,3 +21,4 @@ const dateNow = new Date();
 document.querySelector(".footer-container__contacts-logo").textContent = `Sovamotors13@${dateNow.getFullYear()}`;
 
 initAccordion();
+initModal();

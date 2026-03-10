@@ -1,0 +1,100 @@
+.modal-container {
+  width: 100%;
+  height: 100svh;
+  max-height: 100svh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include background-glass;
+  @include flex-center-center-column;
+  z-index: var(--z-index-modal);
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition-fast);
+
+  &__button--close {
+    position: absolute;
+    @include flex-center-center-row;
+    top: 20px;
+    right: 20px;
+
+    .button {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-pill);
+    }
+  }
+}
+
+.modal-container__inner {
+  width: 90%;
+  height: 80svh;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  @include flex-between-center-row;
+
+  &__image-wrapper {
+    flex: 1;
+    height: 100%;
+    transition: var(--transition-slow);
+
+    .modal-container__inner-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius-lg);
+    }
+
+    &:hover {
+      flex: 2;
+    }
+  }
+
+  &-text {
+    flex: 2;
+    width: 100%;
+    padding: var(--space-9);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+
+    &__title {
+      color: var(--color-text);
+    }
+
+    &__description {
+      color: var(--color-text-secondary);
+    }
+
+    .modal-container__inner-socials {
+      display: flex;
+      gap: var(--space-5);
+
+      .link--modal {
+        height: 50px;
+        width: 50px;
+        border-radius: var(--radius-lg);
+        @include flex-center-center-row;
+        @include background-glass;
+        transition: var(--transition-normal);
+        border: 1px solid var(--color-bg-secondary);
+
+        &:hover {
+          background-color: var(--color-bg-secondary);
+          border: 1px solid var(--color-border);
+        }
+      }
+    }
+  }
+}
+
+.modal-container--hidden {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
