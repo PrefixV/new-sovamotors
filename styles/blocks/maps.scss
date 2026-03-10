@@ -1,0 +1,25 @@
+.maps-container {
+  padding: var(--space-8);
+  @include flex-center-center-column;
+  width: 100%;
+  gap: var(--space-8);
+}
+
+.yandex-wrapper {
+  @include flex-center-center-row;
+  width: 100%;
+  gap: var(--space-8);
+
+  &__maps,
+  &__ratings {
+    width: 100%;
+    max-width: 560px;
+    max-height: 560px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+
+    iframe,div {
+      border-radius: var(--radius-lg);
+    }
+  }
+}
