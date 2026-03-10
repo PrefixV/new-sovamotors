@@ -59,6 +59,20 @@ body, html {
   background-color: transparent;
 }
 
+.text-wrapper {
+  text-align: center;
+  color: var(--color-text);
+
+  &__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__description {
+    color: var(--color-text-secondary);
+  }
+}
+
 .video-background {
   position: fixed;
   top: 0;

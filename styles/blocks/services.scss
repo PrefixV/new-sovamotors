@@ -5,28 +5,14 @@
   gap: var(--space-9);
 }
 
-.services-container__text-wrapper {
-  text-align: center;
-  color: var(--color-text);
-
-  &__title {
-      font-size: var(--font-size-3xl);
-      font-weight: var(--font-weight-medium);
-  }
-
-  &__description {
-    color: var(--color-text-secondary);
-  }
-}
-
 .services-container__row {
   @include flex-center-center-row;
   align-items: stretch;
-  gap: var(--space-8);
+  gap: var(--space-9);
   width: 100%;
+  max-width: 1780px;
   opacity: 1;
   visibility: visible;
-  max-height: 100%;
   transition: var(--transition-normal);
 }
 
