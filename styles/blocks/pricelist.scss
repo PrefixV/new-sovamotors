@@ -13,7 +13,7 @@
 
 .pricelist-container__accordion-item {
   width: 100%;
-  background-color: var(--color-bg-secondary);
+  @include background-glass;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-5);

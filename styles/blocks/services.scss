@@ -1,6 +1,5 @@
 .services-container {
   @include flex-center-center-column;
-  background: var(--color-bg-secondary);
   padding: var(--space-9);
   gap: var(--space-9);
 }
