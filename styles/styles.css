@@ -63,6 +63,63 @@
   --z-index-modal: 1000;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fade-in 1.5s forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  animation: reveal linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+}
+
+.reveal-left {
+  transform: translateX(-80px);
+  animation: slide-left linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.reveal-right {
+  transform: translateX(80px);
+  animation: slide-right linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes slide-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -610,7 +667,7 @@ body, html {
   overflow: hidden;
   opacity: 1;
   visibility: visible;
-  transition: var(--transition-fast);
+  transition: var(--transition-normal);
 }
 .modal-container__button--close {
   position: absolute;
