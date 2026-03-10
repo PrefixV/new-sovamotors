@@ -1,4 +1,8 @@
 import { toggleSocials } from "./modules/toggleSocials.js";
+import { toggleServices} from "./modules/toggleServices.js";
 
 document.querySelector(".socials-container-trigger")
-.addEventListener("click", toggleSocials);
+    .addEventListener("click", toggleSocials);
+
+document.querySelector(".services-container__row-card__show__button")
+    .addEventListener("click", toggleServices);

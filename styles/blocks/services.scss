@@ -1,0 +1,105 @@
+.services-container {
+  @include flex-center-center-column;
+  background: var(--color-bg-secondary);
+  padding: var(--space-9);
+  gap: var(--space-9);
+}
+
+.services-container__text-wrapper {
+  text-align: center;
+  color: var(--color-text);
+
+  &__title {
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-medium);
+  }
+
+  &__description {
+    color: var(--color-text-secondary);
+  }
+}
+
+.services-container__row {
+  @include flex-center-center-row;
+  align-items: stretch;
+  gap: var(--space-8);
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  max-height: 100%;
+  transition: var(--transition-normal);
+}
+
+.services-container__row-card {
+  width: 20%;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  @include background-glass;
+  transition: var(--transition-normal);
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      max-height: 200px;
+      height: 200px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      transition: var(--transition-normal);
+    }
+
+    .services-container__row-card__image-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      @include background-glass;
+      padding: var(--space-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+  }
+
+ &__body {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+
+   &-title {
+     color: var(--color-text);
+   }
+
+   &-description {
+     color: var(--color-text-secondary);
+   }
+ }
+
+  &__button {
+    max-width: 100%;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    transform: translateY(-8px);
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.services-container__row--hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}

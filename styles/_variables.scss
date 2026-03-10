@@ -11,7 +11,7 @@
   --color-border-soft: #242833;
 
   --color-text: #e6e8ee;
-  --color-text-secondary: #a8adbb;
+  --color-text-secondary: #d4d5de;
   --color-text-muted: #6c7280;
 
   --color-primary: #5b8cff;
@@ -76,4 +76,9 @@
   --transition-normal: 200ms ease;
   --transition-slow: 350ms ease;
 
+
+  /* =================== Z-INDEX =================== */
+
+  --z-index-header: 800;
+  --z-index-modal: 1000;
 }
