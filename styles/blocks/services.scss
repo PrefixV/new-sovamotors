@@ -10,11 +10,10 @@
   gap: var(--space-9);
   width: 100%;
   max-width: 1780px;
-  max-height: 700px;
   opacity: 1;
   visibility: visible;
-  transition: var(--transition-normal);
-  overflow: hidden;
+  max-height: 100%;
+  transition: var(--transition-fast);
 }
 
 .services-container__row-card {
