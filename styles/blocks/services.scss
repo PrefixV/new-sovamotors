@@ -1,7 +1,7 @@
 .services-container {
   @include flex-center-center-column;
-  padding: var(--space-9);
-  gap: var(--space-9);
+  padding: var(--space-3);
+  gap: var(--space-5);
 }
 
 .services-container__row {

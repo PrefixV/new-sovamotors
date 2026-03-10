@@ -372,6 +372,17 @@ body, html {
     color: var(--color-text);
   }
 }
+@media only screen and (max-width: 480px) {
+  .hero-container__title {
+    gap: var(--space-3);
+    flex: 2;
+  }
+  .hero-container__title-slogan {
+    font-size: 38px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+  }
+}
 .socials-container-trigger {
   position: fixed;
   bottom: 20px;
@@ -436,8 +447,8 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: var(--space-9);
-  gap: var(--space-9);
+  padding: var(--space-3);
+  gap: var(--space-5);
 }
 
 .services-container__row {
@@ -746,6 +757,13 @@ body, html {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 480px) {
+  .gallery-slider__wrapper {
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-5);
+    aspect-ratio: 4/3;
+  }
+}
 .footer {
   padding: var(--space-8);
   background: rgba(255, 255, 255, 0.03);

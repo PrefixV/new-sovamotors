@@ -62,3 +62,11 @@
     }
   }
 }
+
+@media only screen and (max-width: $mobile-md) {
+  .gallery-slider__wrapper {
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-5);
+    aspect-ratio: 4 / 3;
+  }
+}
