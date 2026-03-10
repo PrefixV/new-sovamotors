@@ -15,4 +15,8 @@ document.querySelector(".slider__button--next")
 document.querySelector(".slider__button--prev")
     .addEventListener("click", prevSlide);
 
+const dateNow = new Date();
+
+document.querySelector(".footer-container__contacts-logo").textContent = `Sovamotors13@${dateNow.getFullYear()}`;
+
 initAccordion();

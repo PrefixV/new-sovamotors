@@ -9,6 +9,7 @@
   border: 1px solid var(--color-border);
   @include flex-center-center-row;
   transition: var(--transition-fast);
+  z-index: var(--z-index-socials);
 
   &:hover {
     background-color: var(--color-bg);
@@ -26,6 +27,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  z-index: var(--z-index-socials);
 
   &__icon {
     height: 50px;

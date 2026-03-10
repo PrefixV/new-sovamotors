@@ -58,6 +58,7 @@
   --transition-normal: 200ms ease;
   --transition-slow: 350ms ease;
   /* =================== Z-INDEX =================== */
+  --z-index-socials: 600;
   --z-index-header: 800;
   --z-index-modal: 1000;
 }
@@ -247,6 +248,7 @@ body, html {
   justify-content: center;
   align-items: center;
   transition: var(--transition-fast);
+  z-index: var(--z-index-socials);
 }
 .socials-container-trigger:hover {
   background-color: var(--color-bg);
@@ -266,6 +268,7 @@ body, html {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  z-index: var(--z-index-socials);
 }
 .socials-container__icon {
   height: 50px;
@@ -497,7 +500,6 @@ body, html {
   display: flex;
   will-change: transform;
   height: 100%;
-  max-height: 500px;
   transition: var(--transition-fast);
 }
 .gallery-slider__wrapper .slider .slide {
@@ -539,6 +541,55 @@ body, html {
 .slider__buttons-wrapper .slider__button:hover {
   background-color: rgba(133, 133, 133, 0.75);
   cursor: pointer;
+}
+
+.footer {
+  padding: var(--space-8);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 var(--space-8);
+  gap: var(--space-8);
+}
+.footer-container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer-container__header-logo {
+  font-size: var(--font-size-2xl);
+}
+.footer-container__header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-5);
+}
+.footer-container__body {
+  width: 100%;
+}
+.footer-container__body hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-container__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer-container__contacts-logo {
+  font-weight: var(--font-weight-regular);
+}
+.footer-container__contacts-information {
+  color: var(--color-text-secondary);
 }
 
 /*# sourceMappingURL=styles.css.map */

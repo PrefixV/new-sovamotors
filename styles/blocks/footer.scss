@@ -1,0 +1,48 @@
+.footer {
+  padding: var(--space-8);
+  @include background-glass;
+}
+
+.footer-container {
+  @include flex-between-center-column;
+  padding:0 var(--space-8);
+  gap: var(--space-8);
+
+  &__header {
+    @include flex-between-center-row;
+    width: 100%;
+
+    &-logo {
+      font-size: var(--font-size-2xl);
+    }
+
+    &__menu-list {
+      @include flex-between-center-row;
+      gap: var(--space-5);
+    }
+
+
+  }
+
+  &__body {
+    width: 100%;
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__contacts {
+    @include flex-between-center-row;
+    width: 100%;
+
+    &-logo {
+      font-weight: var(--font-weight-regular);
+    }
+
+    &-information {
+      color: var(--color-text-secondary);
+    }
+  }
+}
