@@ -11,9 +11,9 @@
   overflow: hidden;
   width: 100%;
   max-width: 900px;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   margin-top: var(--space-5);
-  aspect-ratio: 16 / 9;
 
   .slider {
     display: flex;
@@ -33,7 +33,6 @@
         object-fit: cover;
         object-position: center;
         display: block;
-        aspect-ratio: 16 / 9;
       }
     }
   }
@@ -64,43 +63,25 @@
   }
 }
 
-@media only screen and (max-width: $tablet-sm) {
-  .gallery-slider__wrapper {
-    aspect-ratio: 4 / 3;
-  }
-
-  .slider {
-    .slide {
-      img {
-        aspect-ratio: 4 / 3;
-      }
-    }
-  }
-}
-
-
-@media only screen and (max-width: $mobile-md) {
-  .gallery-slider__wrapper {
-    aspect-ratio: 1 / 1;
-  }
-
-  .slider {
-    .slide {
-      img {
-        aspect-ratio: 1 / 1;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: $mobile-xs) {
   .gallery-container {
     padding: var(--space-2);
   }
-  .slider {
-    .slide {
-      img {
-        aspect-ratio: 1 / 1;
+}
+
+@media only screen and (max-width: $mobile-xs, $tablet-sm, $mobile-lg, $laptop, $tablet-lg) {
+  .gallery-slider__wrapper {
+    aspect-ratio: 4 / 3;
+
+    .slider {
+      .slide {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
       }
     }
   }
