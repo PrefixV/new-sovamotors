@@ -858,6 +858,7 @@ main {
   object-fit: cover;
   object-position: center;
   display: block;
+  aspect-ratio: 16/9;
 }
 
 .slider__buttons-wrapper {
@@ -887,21 +888,28 @@ main {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  .gallery-slider__wrapper {
+    aspect-ratio: 4/3;
+  }
+  .slider .slide img {
+    aspect-ratio: 4/3;
+  }
+}
 @media only screen and (max-width: 480px) {
   .gallery-slider__wrapper {
-    border-radius: var(--radius-lg);
-    margin-top: var(--space-5);
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
+  }
+  .slider .slide img {
+    aspect-ratio: 1/1;
   }
 }
 @media only screen and (max-width: 395px) {
   .gallery-container {
     padding: var(--space-2);
   }
-  .gallery-slider__wrapper {
-    border-radius: var(--radius-lg);
-    margin-top: var(--space-5);
-    aspect-ratio: 4/3;
+  .slider .slide img {
+    aspect-ratio: 1/1;
   }
 }
 .footer {
@@ -1149,6 +1157,10 @@ main {
   .modal-container {
     height: 100vh;
     max-height: 100vh;
+  }
+  .modal-container__button--close {
+    top: 10px;
+    right: 10px;
   }
   .modal-container__inner-text {
     padding: var(--space-4);

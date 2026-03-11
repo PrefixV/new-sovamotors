@@ -115,6 +115,11 @@
   .modal-container {
     height: 100vh;
     max-height: 100vh;
+
+    &__button--close {
+      top: 10px;
+      right: 10px;
+    }
   }
 
   .modal-container__inner {
