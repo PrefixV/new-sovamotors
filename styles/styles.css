@@ -1158,8 +1158,8 @@ main {
 }
 @media only screen and (max-width: 395px) {
   .modal-container {
-    height: 100vh;
-    max-height: 100vh;
+    height: 100svh;
+    max-height: 100svh;
   }
   .modal-container__button--close {
     top: 10px;
@@ -1167,6 +1167,7 @@ main {
   }
   .modal-container__inner-text {
     padding: var(--space-4);
+    overflow-y: visible;
   }
   .modal-container__inner-text__title {
     font-size: var(--font-size-2xl);
