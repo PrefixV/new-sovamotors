@@ -114,19 +114,23 @@
 
 @media only screen and (max-width: $mobile-xs) {
   .modal-container {
-    height: 100svh;
-    max-height: 100svh;
+    height: 100vh;
+    max-height: 100vh;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: var(--space-6);
 
     &__button--close {
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 20px;
     }
   }
 
   .modal-container__inner {
+    overflow: auto;
+
     &-text {
       padding: var(--space-4);
-      overflow-y: visible;
 
       &__title {
         font-size: var(--font-size-2xl);
