@@ -1,19 +1,20 @@
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-
+const slides = document.querySelectorAll(".slide");
 let index = 0;
 const totalSlides = slides.length;
 
-function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
+export function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
 }
 
 export function nextSlide() {
     index = (index + 1) % totalSlides;
-    updateSlider();
+    showSlide(index);
 }
 
 export function prevSlide() {
     index = (index - 1 + totalSlides) % totalSlides;
-    updateSlider();
+    showSlide(index);
 }
+
+showSlide(index);

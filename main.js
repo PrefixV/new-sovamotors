@@ -1,7 +1,7 @@
 import { toggleSocials } from "./modules/toggleSocials.js";
 import { toggleServices} from "./modules/toggleServices.js";
 import { initAccordion } from "./modules/accordion.js";
-import { nextSlide, prevSlide } from "./modules/gallery.js";
+import { nextSlide, prevSlide, showSlide } from "./modules/gallery.js";
 import { initModal } from "./modules/toggleModal.js";
 import { toggleHeader } from "./modules/toggleHeader.js";
 
