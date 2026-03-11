@@ -243,6 +243,9 @@ main {
   width: 100%;
   z-index: var(--z-index-header);
 }
+.header .link--logo {
+  font-size: var(--font-size-2xl);
+}
 .header__menu-list {
   display: flex;
   justify-content: center;
