@@ -31,8 +31,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
-        display: block;
       }
     }
   }
@@ -66,23 +64,6 @@
 @media only screen and (max-width: $mobile-xs) {
   .gallery-container {
     padding: var(--space-2);
-  }
-}
-
-@media only screen and (max-width: $mobile-xs, $tablet-sm, $mobile-lg, $laptop, $tablet-lg) {
-  .gallery-slider__wrapper {
-    aspect-ratio: 4 / 3;
-
-    .slider {
-      .slide {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          display: block;
-        }
-      }
-    }
+    height: 300px;
   }
 }
