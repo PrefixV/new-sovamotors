@@ -408,6 +408,7 @@ main {
 @media only screen and (max-width: 395px) {
   .hero-container {
     padding: var(--space-9) var(--space-2);
+    height: 100vh;
   }
   .hero-container__title {
     gap: var(--space-3);
@@ -415,7 +416,11 @@ main {
     text-align: center;
   }
   .hero-container__title-slogan {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-thin);
+  }
+  .hero-container__title .hero-container__description {
+    font-size: var(--font-size-lg);
   }
   .hero-container__title .hero-container__buttons-wrapper {
     flex-direction: column;
@@ -429,7 +434,7 @@ main {
     align-items: center;
   }
   .hero-container__rating-item {
-    padding: var(--space-4);
+    padding: var(--space-2);
     border-radius: var(--radius-lg);
     background-color: var(--color-bg-secondary);
     width: 90%;
@@ -1138,6 +1143,24 @@ main {
   }
   .modal-container__inner__image-wrapper {
     flex: 0;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .modal-container {
+    height: 100vh;
+    max-height: 100vh;
+  }
+  .modal-container__inner-text {
+    padding: var(--space-4);
+  }
+  .modal-container__inner-text__title {
+    font-size: var(--font-size-2xl);
+  }
+  .modal-container__inner-text__description {
+    font-size: var(--font-size-sm);
+  }
+  .modal-container__inner-text .modal-container__inner-socials .link--modal {
+    backdrop-filter: none;
   }
 }
 
