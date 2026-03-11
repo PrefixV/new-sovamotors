@@ -423,10 +423,13 @@ main {
     font-size: var(--font-size-lg);
   }
   .hero-container__title .hero-container__buttons-wrapper {
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .hero-container__title .hero-container__buttons-wrapper .hero-container__title-button {
-    min-width: 90%;
+    min-width: 130px;
   }
   .hero-container__rating {
     gap: var(--space-2);
