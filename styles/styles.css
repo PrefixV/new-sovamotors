@@ -237,6 +237,7 @@ main {
   align-items: center;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -456,6 +457,7 @@ main {
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid var(--color-border);
   display: flex;
   justify-content: center;
@@ -489,6 +491,7 @@ main {
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -540,6 +543,7 @@ main {
   gap: var(--space-6);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: var(--transition-normal);
 }
 .services-container__row-card__image {
@@ -562,6 +566,7 @@ main {
   right: 20px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: var(--space-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -666,6 +671,7 @@ main {
   width: 100%;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
@@ -731,6 +737,7 @@ main {
     width: 100%;
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
@@ -884,6 +891,7 @@ main {
   border: none;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: var(--transition-fast);
 }
 .slider__buttons-wrapper .slider__button:hover {
@@ -919,6 +927,7 @@ main {
   padding: var(--space-8);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .footer-container {
@@ -1132,6 +1141,7 @@ main {
   align-items: center;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: var(--transition-normal);
   border: 1px solid var(--color-bg-secondary);
 }
