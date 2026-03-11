@@ -4,7 +4,6 @@
   padding: 0;
   scroll-behavior: smooth;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-  user-select: none;
 }
 
 body {
@@ -18,6 +17,13 @@ body {
 
 body, html {
   scrollbar-width: none;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .logo {
@@ -114,8 +120,7 @@ body, html {
     }
 
     &__description {
-      color: var(--color-text-secondary);
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-xs);
     }
   }
 }

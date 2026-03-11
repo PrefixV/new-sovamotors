@@ -40,3 +40,23 @@
     }
   }
 }
+
+@media only screen and (max-width: $mobile-xs) {
+  .maps-container {
+    padding: var(--space-1);
+  }
+  .yandex-wrapper {
+    @include flex-center-center-column;
+    padding: var(--space-1);
+
+    &__maps,
+    &__ratings {
+      max-width: 560px;
+      max-height: 360px;
+
+      div, iframe {
+        height: 360px;
+      }
+    }
+  }
+}
