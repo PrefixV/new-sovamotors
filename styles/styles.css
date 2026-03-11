@@ -893,7 +893,6 @@ img {
   overflow: hidden;
   width: 100%;
   max-width: 900px;
-  aspect-ratio: 16/9;
   border-radius: var(--radius-lg);
   margin-top: var(--space-5);
 }
@@ -953,6 +952,27 @@ img {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 395px) {
+  .gallery-container {
+    padding: var(--space-2);
+  }
+  .gallery-slider__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-5);
+  }
+  .gallery-slider__wrapper .slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 350px;
+    height: 350px;
+    overflow: hidden;
+  }
+}
 .footer {
   padding: var(--space-8);
   background: rgba(255, 255, 255, 0.03);
