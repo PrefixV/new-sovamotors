@@ -126,6 +126,13 @@
   padding: 0;
   scroll-behavior: smooth;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 body {
@@ -135,10 +142,20 @@ body {
   flex-direction: column;
   gap: 100px;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 
 body, html {
   scrollbar-width: none;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 main {
@@ -196,6 +213,10 @@ main {
 }
 .text-wrapper__description {
   color: var(--color-text-secondary);
+}
+
+img {
+  -webkit-user-drag: none;
 }
 
 .video-background {
@@ -270,6 +291,9 @@ main {
     opacity: 0;
     visibility: hidden;
     width: 0;
+  }
+  .header .link--logo {
+    font-size: var(--font-size-3xl);
   }
   .header .mobile-nav__button {
     display: block;
