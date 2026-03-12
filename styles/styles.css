@@ -89,6 +89,18 @@
     transform: translateY(0) scale(1);
   }
 }
+.fade-scroll {
+  opacity: 0;
+  animation: fade-scroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fade-scroll {
+  to {
+    opacity: 1;
+  }
+}
 .reveal-left,
 .reveal-right {
   opacity: 0;
@@ -129,9 +141,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -227,12 +239,14 @@ img {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
 }
 .video-background video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: blur(10px);
   transform: scale(1.1);
 }
@@ -597,7 +611,8 @@ img {
 .services-container__row-card__image img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--radius-lg);
   transition: var(--transition-normal);
 }
@@ -861,8 +876,10 @@ img {
 .gallery-slider__wrapper .slider .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   display: block;
 }
 .gallery-slider__wrapper .slider .slide.active {
@@ -1106,8 +1123,10 @@ img {
 .modal-container__inner__image-wrapper .modal-container__inner-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: var(--radius-lg);
 }
 .modal-container__inner__image-wrapper:hover {
@@ -1151,8 +1170,6 @@ img {
 }
 
 .modal-container--hidden {
-  left: 0;
-  top: 0;
   opacity: 0;
   visibility: hidden;
   max-height: 0;
@@ -1194,6 +1211,4 @@ img {
   .modal-container__inner-text .modal-container__inner-socials .link--modal {
     backdrop-filter: none;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
