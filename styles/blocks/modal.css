@@ -51,10 +51,8 @@
 .modal-container__inner__image-wrapper .modal-container__inner-image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-lg);
 }
 .modal-container__inner__image-wrapper:hover {
@@ -139,4 +137,6 @@
   .modal-container__inner-text .modal-container__inner-socials .link--modal {
     backdrop-filter: none;
   }
-}/*# sourceMappingURL=modal.css.map */
+}
+
+/*# sourceMappingURL=modal.css.map */
