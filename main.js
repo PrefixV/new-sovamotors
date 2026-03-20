@@ -17,9 +17,7 @@ document.querySelector(".slider__button--next")
 document.querySelector(".slider__button--prev")
     .addEventListener("click", prevSlide);
 
-const dateNow = new Date();
-
-document.querySelector(".footer-container__contacts-logo").textContent = `Sovamotors13@${dateNow.getFullYear()}`;
+document.querySelector(".footer-container__contacts-logo").textContent = `Sovamotors13@${new Date().getFullYear()}`;
 
 document.querySelector(".mobile-nav__button")
     .addEventListener('click', toggleHeader);
